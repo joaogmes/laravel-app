@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\PageController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,3 +22,6 @@ Route::get('/', function () {
 Route::get('/test', function () {
     echo "Routing test";
 });
+
+// Route::get('/page', 'PageController@index');
+Route::get('/page', [PageController::class, 'index']);
